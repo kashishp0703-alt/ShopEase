@@ -1,0 +1,1133 @@
+@import "tailwindcss";
+
+/* =========================================================
+   APP
+========================================================= */
+
+#root {
+  @apply w-full min-h-screen;
+}
+
+.app {
+  @apply w-full min-h-screen bg-white text-gray-900;
+}
+
+.page {
+  @apply w-full min-h-screen;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+  @apply sticky top-0 z-50 w-full h-[76px] bg-white border-b border-gray-200;
+}
+
+.nav-container {
+  @apply w-full max-w-[1500px] h-full mx-auto px-[5%]
+    flex items-center justify-between;
+}
+
+.logo {
+  @apply text-[27px] font-extrabold tracking-[-1px] text-gray-900
+    no-underline whitespace-nowrap;
+}
+
+.logo span {
+  @apply text-orange-500;
+}
+
+.nav-links {
+  @apply flex items-center gap-[38px];
+}
+
+.nav-links a {
+  @apply relative text-[15px] font-medium text-gray-700
+    transition-all duration-300;
+}
+
+.nav-links a:hover {
+  @apply text-orange-500;
+}
+
+.nav-actions {
+  @apply flex items-center gap-2;
+}
+
+.icon-btn {
+  @apply w-10 h-10 border-0 bg-transparent rounded-full
+    flex items-center justify-center
+    text-lg cursor-pointer
+    transition-all duration-300;
+}
+
+.icon-btn:hover {
+  @apply bg-gray-100 -translate-y-0.5;
+}
+
+.menu-btn {
+  @apply hidden w-[42px] h-[42px] border-0 rounded-lg
+    bg-gray-900 text-white
+    items-center justify-center
+    text-xl cursor-pointer
+    transition-all duration-300;
+}
+
+.menu-btn:hover {
+  @apply bg-orange-500;
+}
+
+
+/* =========================================================
+   COMMON SECTION
+========================================================= */
+
+.section {
+  @apply w-full px-[5%] py-[90px];
+}
+
+.section-inner {
+  @apply w-full max-w-[1500px] mx-auto;
+}
+
+.section-heading {
+  @apply w-full mb-10
+    flex items-end justify-between;
+}
+
+.section-label {
+  @apply mb-2.5 text-[11px] font-extrabold
+    tracking-[2px] text-orange-500;
+}
+
+.section-heading h2 {
+  @apply m-0 text-gray-900
+    text-[clamp(30px,3vw,44px)]
+    font-bold tracking-[-1.5px];
+}
+
+.view-all-btn {
+  @apply border-0 bg-transparent
+    text-gray-900 text-sm font-bold
+    cursor-pointer transition-all duration-300;
+}
+
+.view-all-btn:hover {
+  @apply text-orange-500 translate-x-1;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+  @apply w-full max-w-[1500px] min-h-[calc(100vh-76px)]
+    mx-auto px-[5%] py-20
+    grid grid-cols-2 items-center gap-[70px];
+}
+
+.hero-content {
+  @apply w-full max-w-[650px];
+}
+
+.hero-subtitle {
+  @apply mb-4 text-xs font-extrabold
+    tracking-[2px] text-orange-500;
+}
+
+.hero h1 {
+  @apply m-0 text-gray-900
+    text-[clamp(48px,5vw,78px)]
+    font-extrabold leading-[1.02]
+    tracking-[-3px];
+}
+
+.hero h1 span {
+  @apply block text-orange-500;
+}
+
+.hero-description {
+  @apply max-w-[560px] mt-6
+    text-gray-500 text-base leading-7;
+}
+
+.hero-buttons {
+  @apply flex items-center gap-4 mt-9;
+}
+
+.primary-btn {
+  @apply border-0 px-6 py-4 rounded-lg
+    bg-orange-500 text-white
+    text-sm font-bold cursor-pointer
+    shadow-lg shadow-orange-500/20
+    transition-all duration-300;
+}
+
+.primary-btn:hover {
+  @apply bg-gray-900 -translate-y-1;
+}
+
+.secondary-btn {
+  @apply px-6 py-4 rounded-lg
+    bg-white text-gray-900
+    border border-gray-300
+    text-sm font-bold cursor-pointer
+    transition-all duration-300;
+}
+
+.secondary-btn:hover {
+  @apply border-gray-900 -translate-y-1;
+}
+
+.hero-info {
+  @apply flex items-center gap-[50px] mt-[50px];
+}
+
+.hero-info div {
+  @apply flex flex-col gap-1;
+}
+
+.hero-info strong {
+  @apply text-[22px] font-bold text-gray-900;
+}
+
+.hero-info span {
+  @apply text-xs text-gray-500;
+}
+
+.hero-visual {
+  @apply w-full flex justify-center;
+}
+
+.hero-image-wrapper {
+  @apply relative w-full max-w-[620px];
+}
+
+.hero-image-wrapper > img {
+  @apply w-full h-[600px] object-cover rounded-2xl;
+}
+
+.hero-floating-card {
+  @apply absolute left-[-25px] bottom-[30px]
+    px-5 py-4
+    bg-white/95 border border-gray-200 rounded-xl
+    flex items-center gap-3
+    shadow-2xl;
+}
+
+.floating-icon {
+  @apply w-[38px] h-[38px]
+    flex items-center justify-center
+    bg-orange-50 text-orange-500
+    rounded-full;
+}
+
+.hero-floating-card div {
+  @apply flex flex-col gap-1;
+}
+
+.hero-floating-card strong {
+  @apply text-[13px] text-gray-900;
+}
+
+.hero-floating-card small {
+  @apply text-[11px] text-gray-500;
+}
+
+
+/* =========================================================
+   CATEGORY GRID
+========================================================= */
+
+.category-grid {
+  @apply w-full grid grid-cols-4 gap-[18px];
+}
+
+.category-card {
+  @apply relative h-[390px] overflow-hidden rounded-[15px] cursor-pointer;
+}
+
+.category-card img {
+  @apply w-full h-full object-cover
+    transition-transform duration-500;
+}
+
+.category-card:hover img {
+  @apply scale-105;
+}
+
+.category-overlay {
+  @apply absolute z-10 left-6 right-6 bottom-6 text-white;
+}
+
+.category-overlay h3 {
+  @apply mb-2 text-xl font-bold;
+}
+
+.category-overlay span {
+  @apply text-xs text-white/85;
+}
+
+
+/* =========================================================
+   PRODUCTS
+========================================================= */
+
+.products-section {
+  @apply w-full px-[5%] py-[90px] bg-gray-50;
+}
+
+.products-section > .section-inner {
+  @apply w-full max-w-[1500px] mx-auto;
+}
+
+.product-grid {
+  @apply w-full grid grid-cols-4 gap-[22px];
+}
+
+.product-card {
+  @apply overflow-hidden bg-white rounded-[15px]
+    transition-all duration-300;
+}
+
+.product-card:hover {
+  @apply -translate-y-2 shadow-xl;
+}
+
+.product-image {
+  @apply relative w-full h-[340px]
+    overflow-hidden bg-gray-100;
+}
+
+.product-image > img {
+  @apply w-full h-full object-cover
+    transition-transform duration-500;
+}
+
+.product-card:hover .product-image > img {
+  @apply scale-105;
+}
+
+.product-badge {
+  @apply absolute z-10 top-4 left-4
+    px-2.5 py-1.5 rounded
+    bg-orange-500 text-white
+    text-[10px] font-extrabold;
+}
+
+.wishlist-btn {
+  @apply absolute z-10 top-3 right-3
+    w-[38px] h-[38px]
+    border-0 rounded-full
+    bg-white text-gray-900
+    flex items-center justify-center
+    text-lg cursor-pointer
+    transition-all duration-300;
+}
+
+.wishlist-btn:hover {
+  @apply bg-gray-900 text-white;
+}
+
+.quick-add {
+  @apply absolute z-10 left-4 right-4 bottom-4
+    w-[calc(100%-32px)]
+    py-3 border-0 rounded-lg
+    bg-gray-900 text-white
+    text-[13px] font-bold
+    opacity-0 translate-y-2
+    cursor-pointer
+    transition-all duration-300;
+}
+
+.product-card:hover .quick-add {
+  @apply opacity-100 translate-y-0;
+}
+
+.quick-add:hover {
+  @apply bg-orange-500;
+}
+
+.product-info {
+  @apply p-5;
+}
+
+.product-info > p {
+  @apply mb-2 text-[11px] uppercase
+    tracking-[1px] text-gray-400;
+}
+
+.product-info h3 {
+  @apply mb-2.5 text-[17px] font-bold text-gray-900;
+}
+
+.rating {
+  @apply mb-3 text-[13px] text-gray-500;
+}
+
+.rating span {
+  @apply text-orange-500;
+}
+
+.price {
+  @apply flex items-center gap-2.5;
+}
+
+.price strong {
+  @apply text-[19px] font-bold text-gray-900;
+}
+
+.price del {
+  @apply text-[13px] text-gray-400;
+}
+
+
+/* =========================================================
+   PROMO
+========================================================= */
+
+.promo-section {
+  @apply w-[90%] max-w-[1400px] min-h-[360px]
+    mx-auto my-[90px] px-[7%] py-[60px]
+    rounded-[20px]
+    bg-gray-900 text-white
+    flex items-center justify-between
+    overflow-hidden;
+}
+
+.promo-content p {
+  @apply mb-4 text-[11px] font-extrabold
+    tracking-[2px] text-orange-500;
+}
+
+.promo-content h2 {
+  @apply mb-[18px]
+    text-[clamp(35px,4vw,55px)]
+    font-bold leading-none
+    tracking-[-2px];
+}
+
+.promo-content span {
+  @apply block text-sm text-gray-400;
+}
+
+.promo-btn {
+  @apply mt-7 px-6 py-3.5
+    border-0 rounded-lg
+    bg-orange-500 text-white
+    text-[13px] font-bold
+    cursor-pointer
+    transition-all duration-300;
+}
+
+.promo-btn:hover {
+  @apply bg-white text-gray-900;
+}
+
+.promo-decoration {
+  @apply w-[250px] h-[250px]
+    rounded-full
+    border-2 border-orange-500/50
+    flex flex-col items-center justify-center
+    -rotate-6;
+}
+
+.promo-decoration span {
+  @apply text-[70px] font-extrabold leading-none;
+}
+
+.promo-decoration small {
+  @apply text-base font-extrabold
+    tracking-[3px] text-orange-500;
+}
+
+
+/* =========================================================
+   BENEFITS
+========================================================= */
+
+.benefits-section {
+  @apply bg-white;
+}
+
+.centered {
+  @apply justify-center text-center;
+}
+
+.benefits-grid {
+  @apply grid grid-cols-4 gap-5;
+}
+
+.benefit-card {
+  @apply p-9 text-center
+    border border-gray-200 rounded-[15px]
+    transition-all duration-300;
+}
+
+.benefit-card:hover {
+  @apply -translate-y-1.5
+    border-orange-500 shadow-xl;
+}
+
+.benefit-icon {
+  @apply w-[60px] h-[60px]
+    mx-auto mb-5
+    flex items-center justify-center
+    bg-orange-50 rounded-full
+    text-[25px];
+}
+
+.benefit-card h3 {
+  @apply mb-2.5 text-[17px] font-bold;
+}
+
+.benefit-card p {
+  @apply text-[13px] leading-6 text-gray-500;
+}
+
+
+/* =========================================================
+   NEWSLETTER
+========================================================= */
+
+.newsletter {
+  @apply w-full px-[5%] py-[70px]
+    bg-gray-50
+    flex items-center justify-between gap-10;
+}
+
+.newsletter-content p {
+  @apply mb-2.5 text-[11px] font-extrabold
+    tracking-[2px] text-orange-500;
+}
+
+.newsletter-content h2 {
+  @apply text-[30px] font-bold text-gray-900;
+}
+
+.newsletter-form {
+  @apply w-full max-w-[520px]
+    p-1
+    bg-white border border-gray-300 rounded-lg
+    flex;
+}
+
+.newsletter-form input {
+  @apply w-full px-3.5 py-3.5
+    border-0 outline-none
+    text-[13px];
+}
+
+.newsletter-form button {
+  @apply px-[22px]
+    border-0 rounded-md
+    bg-gray-900 text-white
+    text-[13px] font-bold
+    cursor-pointer
+    transition-all duration-300;
+}
+
+.newsletter-form button:hover {
+  @apply bg-orange-500;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer {
+  @apply w-full pt-[70px] bg-gray-900 text-white;
+}
+
+.footer-container {
+  @apply w-full max-w-[1500px]
+    mx-auto px-[5%] pb-[60px]
+    grid grid-cols-4 gap-[60px];
+}
+
+.footer-logo {
+  @apply inline-block mb-4
+    text-[27px] font-extrabold text-white;
+}
+
+.footer-logo span {
+  @apply text-orange-500;
+}
+
+.footer-brand > p {
+  @apply max-w-[300px]
+    text-[13px] leading-6 text-gray-400;
+}
+
+.social-links {
+  @apply flex gap-4 mt-6;
+}
+
+.social-links a {
+  @apply text-xs text-gray-400
+    transition-colors duration-300;
+}
+
+.social-links a:hover {
+  @apply text-orange-500;
+}
+
+.footer-column {
+  @apply flex flex-col gap-3;
+}
+
+.footer-column h4 {
+  @apply mb-2 text-[15px] font-bold;
+}
+
+.footer-column a {
+  @apply text-[13px] text-gray-400
+    transition-colors duration-300;
+}
+
+.footer-column a:hover {
+  @apply text-orange-500;
+}
+
+.footer-bottom {
+  @apply w-full max-w-[1500px]
+    mx-auto px-[5%] py-5
+    border-t border-gray-800
+    flex items-center justify-between
+    text-[11px] text-gray-500;
+}
+
+
+/* =========================================================
+   INNER PAGES
+========================================================= */
+
+.inner-page {
+  @apply w-full min-h-screen;
+}
+
+.page-hero {
+  @apply w-full min-h-[360px]
+    px-[5%] py-[90px]
+    bg-gray-50
+    flex flex-col items-center justify-center
+    text-center;
+}
+
+.page-hero h1 {
+  @apply mb-[18px]
+    text-[clamp(40px,5vw,65px)]
+    font-extrabold leading-tight
+    tracking-[-2px] text-gray-900;
+}
+
+.page-hero > p:last-child {
+  @apply max-w-[600px]
+    text-[15px] leading-6 text-gray-500;
+}
+
+
+/* =========================================================
+   SHOP PAGE
+========================================================= */
+
+.shop-toolbar {
+  @apply mb-[35px]
+    flex items-center justify-between;
+}
+
+.shop-toolbar h2 {
+  @apply text-[28px] font-bold;
+}
+
+.shop-toolbar select {
+  @apply px-[18px] py-3
+    border border-gray-300 rounded-lg
+    bg-white outline-none
+    cursor-pointer;
+}
+
+.empty-shop {
+  @apply min-h-[350px]
+    border border-dashed border-gray-300 rounded-[15px]
+    flex flex-col items-center justify-center
+    text-center;
+}
+
+.empty-icon {
+  @apply mb-4 text-[50px];
+}
+
+.empty-shop h3 {
+  @apply mb-2 text-[22px] font-bold;
+}
+
+.empty-shop p {
+  @apply text-sm text-gray-500;
+}
+
+
+/* =========================================================
+   CATEGORIES PAGE
+========================================================= */
+
+.category-page-grid {
+  @apply grid grid-cols-4 gap-[22px];
+}
+
+.category-page-card {
+  @apply p-10 text-center
+    border border-gray-200 rounded-[15px]
+    transition-all duration-300;
+}
+
+.category-page-card:hover {
+  @apply -translate-y-2
+    border-orange-500 shadow-xl;
+}
+
+.category-page-icon {
+  @apply w-20 h-20 mx-auto mb-5
+    flex items-center justify-center
+    bg-orange-50 rounded-full
+    text-[35px];
+}
+
+.category-page-card h2 {
+  @apply mb-2.5 text-xl font-bold;
+}
+
+.category-page-card p {
+  @apply mb-5 text-[13px] text-gray-500;
+}
+
+.category-page-card button {
+  @apply px-[18px] py-[11px]
+    border-0 rounded-md
+    bg-gray-900 text-white
+    text-xs font-bold
+    cursor-pointer
+    transition-all duration-300;
+}
+
+.category-page-card button:hover {
+  @apply bg-orange-500;
+}
+
+
+/* =========================================================
+   ABOUT PAGE
+========================================================= */
+
+.about-content {
+  @apply grid grid-cols-2 gap-20 items-center;
+}
+
+.about-text h2 {
+  @apply mb-6
+    text-[clamp(30px,4vw,45px)]
+    font-bold leading-tight;
+}
+
+.about-text > p:not(.section-label) {
+  @apply mb-[18px]
+    text-[15px] leading-7 text-gray-500;
+}
+
+.about-stats {
+  @apply grid grid-cols-2 gap-[15px];
+}
+
+.about-stats div {
+  @apply p-[30px]
+    bg-gray-50 rounded-xl
+    flex flex-col gap-2;
+}
+
+.about-stats strong {
+  @apply text-[30px] font-bold text-orange-500;
+}
+
+.about-stats span {
+  @apply text-xs text-gray-500;
+}
+
+
+/* =========================================================
+   CONTACT PAGE
+========================================================= */
+
+.contact-grid {
+  @apply grid grid-cols-[0.8fr_1.2fr]
+    gap-20;
+}
+
+.contact-info h2 {
+  @apply mb-5 text-[40px] font-bold;
+}
+
+.contact-info > p:not(.section-label) {
+  @apply mb-[30px]
+    text-sm leading-7 text-gray-500;
+}
+
+.contact-item {
+  @apply flex items-center gap-[15px] mb-[22px];
+}
+
+.contact-item > span {
+  @apply w-[45px] h-[45px]
+    flex items-center justify-center
+    bg-orange-50 rounded-full;
+}
+
+.contact-item strong {
+  @apply block mb-1 text-[13px] font-bold;
+}
+
+.contact-item p {
+  @apply text-xs text-gray-500;
+}
+
+.contact-form {
+  @apply p-[35px]
+    bg-gray-50 rounded-[15px];
+}
+
+.form-group {
+  @apply mb-5;
+}
+
+.form-group label {
+  @apply block mb-2
+    text-[13px] font-bold;
+}
+
+.form-group input,
+.form-group textarea {
+  @apply w-full px-[15px] py-3.5
+    border border-gray-300 rounded-lg
+    bg-white outline-none
+    text-[13px]
+    resize-y
+    transition-all duration-300;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  @apply border-orange-500
+    ring-4 ring-orange-500/10;
+}
+
+.contact-form .primary-btn {
+  @apply w-full;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .hero {
+    @apply gap-10;
+  }
+
+  .hero h1 {
+    @apply text-[55px];
+  }
+
+  .hero-image-wrapper > img {
+    @apply h-[500px];
+  }
+
+  .category-grid,
+  .product-grid,
+  .benefits-grid {
+    @apply grid-cols-2;
+  }
+
+  .category-page-grid {
+    @apply grid-cols-2;
+  }
+
+  .about-content {
+    @apply grid-cols-1 gap-12;
+  }
+
+  .contact-grid {
+    @apply grid-cols-1 gap-12;
+  }
+}
+
+
+/* =========================================================
+   MOBILE NAVBAR
+========================================================= */
+
+@media (max-width: 800px) {
+
+  .navbar {
+    @apply h-[70px];
+  }
+
+  .nav-container {
+    @apply px-5;
+  }
+
+  .nav-links {
+    @apply absolute top-[70px] left-0
+      w-full px-5 py-6
+      bg-white border-b border-gray-200
+      flex-col gap-[22px]
+      shadow-xl
+      opacity-0 pointer-events-none
+      -translate-y-[120%]
+      transition-all duration-300;
+  }
+
+  .nav-links.active {
+    @apply opacity-100 pointer-events-auto translate-y-0;
+  }
+
+  .nav-links a {
+    @apply text-base;
+  }
+
+  .menu-btn {
+    @apply flex;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .hero {
+    @apply min-h-0
+      px-5 py-[60px]
+      grid-cols-1 gap-[45px];
+  }
+
+  .hero h1 {
+    @apply text-[48px] tracking-[-2px];
+  }
+
+  .hero-description {
+    @apply text-sm;
+  }
+
+  .hero-info {
+    @apply gap-[30px] mt-[35px];
+  }
+
+  .hero-info strong {
+    @apply text-lg;
+  }
+
+  .hero-image-wrapper > img {
+    @apply h-[450px];
+  }
+
+  .hero-floating-card {
+    @apply left-[15px] bottom-5;
+  }
+
+  .section,
+  .products-section {
+    @apply px-5 py-[60px];
+  }
+
+  .section-heading {
+    @apply items-start gap-5;
+  }
+
+  .section-heading h2 {
+    @apply text-[32px];
+  }
+
+  .category-card {
+    @apply h-[320px];
+  }
+
+  .promo-section {
+    @apply w-[calc(100%-40px)]
+      mx-5 my-[60px]
+      px-[30px] py-[50px]
+      flex-col items-start gap-10;
+  }
+
+  .promo-decoration {
+    @apply w-[180px] h-[180px] self-center;
+  }
+
+  .promo-decoration span {
+    @apply text-[50px];
+  }
+
+  .newsletter {
+    @apply px-5 py-[55px]
+      flex-col items-start;
+  }
+
+  .newsletter-form {
+    @apply max-w-full;
+  }
+
+  .footer {
+    @apply px-5 pt-[55px];
+  }
+
+  .footer-container {
+    @apply px-0 grid-cols-2 gap-10;
+  }
+
+  .page-hero {
+    @apply min-h-[300px] px-5 py-[60px];
+  }
+
+  .page-hero h1 {
+    @apply text-[40px];
+  }
+
+  .about-content {
+    @apply grid-cols-1;
+  }
+
+  .contact-grid {
+    @apply grid-cols-1;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 550px) {
+
+  .logo {
+    @apply text-[23px];
+  }
+
+  .nav-actions {
+    @apply gap-0.5;
+  }
+
+  .icon-btn:first-child {
+    @apply hidden;
+  }
+
+  .hero {
+    @apply px-[15px] py-[45px];
+  }
+
+  .hero h1 {
+    @apply text-[40px];
+  }
+
+  .hero-buttons {
+    @apply flex-col items-stretch;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    @apply w-full;
+  }
+
+  .hero-info {
+    @apply justify-between gap-2.5;
+  }
+
+  .hero-image-wrapper > img {
+    @apply h-[380px] rounded-[14px];
+  }
+
+  .hero-floating-card {
+    @apply left-2.5 px-3.5 py-3;
+  }
+
+  .category-grid,
+  .product-grid,
+  .benefits-grid,
+  .category-page-grid {
+    @apply grid-cols-1;
+  }
+
+  .product-image {
+    @apply h-[380px];
+  }
+
+  .newsletter-form {
+    @apply flex-col gap-1
+      bg-transparent border-0 p-0;
+  }
+
+  .newsletter-form input {
+    @apply w-full border border-gray-300 rounded-lg;
+  }
+
+  .newsletter-form button {
+    @apply w-full py-[15px];
+  }
+
+  .footer-container {
+    @apply grid-cols-1;
+  }
+
+  .footer-bottom {
+    @apply flex-col items-start gap-2.5;
+  }
+
+  .shop-toolbar {
+    @apply flex-col items-start gap-[15px];
+  }
+
+  .shop-toolbar select {
+    @apply w-full;
+  }
+
+  .about-stats {
+    @apply grid-cols-1;
+  }
+
+  .contact-info h2 {
+    @apply text-[32px];
+  }
+
+  .contact-form {
+    @apply px-5;
+  }
+}
+
+
+/* =========================================================
+   EXTRA SMALL
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .hero h1 {
+    @apply text-[35px];
+  }
+
+  .hero-info {
+    @apply flex-wrap;
+  }
+
+  .hero-info div {
+    @apply min-w-[70px];
+  }
+
+  .product-image {
+    @apply h-[330px];
+  }
+}
