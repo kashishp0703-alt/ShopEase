@@ -94,5 +94,5 @@ ShopEase is a **frontend-only React e-commerce project** created to demonstrate 
 
 Built with React.js and modern frontend technologies.
 
-## If you like this project, consider giving the repository a ⭐ on GitHub.##
+## If you like this project, consider giving the repository a ⭐ on GitHub.
 
